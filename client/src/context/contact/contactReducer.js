@@ -1,4 +1,3 @@
-import Contact from '../../components/contacts/Contacts';
 import {
     ADD_CONTACT,
     DELETE_CONTACT,
