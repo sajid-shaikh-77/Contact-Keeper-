@@ -7,7 +7,7 @@ const Contacts = () => {
 
     const { contacts, filtered } = contactContext;
 
-    if (contacts.lenght === 0) {
+    if (contacts.length === 0) {
         return <h4>Please Add Contact</h4>
     }
 
@@ -15,10 +15,10 @@ const Contacts = () => {
         <Fragment>
             {filtered ?
                 filtered?.map(contact => (
-                    <ContactItem key={contact.id} contact={contact} />
+                    <ContactItem key={contact._id} contact={contact} />
                 ))
                 : contacts.map(contact => (
-                    <ContactItem key={contact.id} contact={contact} />
+                    <ContactItem key={contact._id} contact={contact} />
                 ))}
 
         </Fragment>

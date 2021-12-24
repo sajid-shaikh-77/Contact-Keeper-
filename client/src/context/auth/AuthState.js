@@ -28,14 +28,14 @@ const AuthState = props => {
 
     // Load User
     const loadUser = async () => {
-        if(localStorage.token){
+        if (localStorage.token) {
             setAuthToken(localStorage.token);
         }
 
         try {
-            const res =  await axios.get('http://localhost:5000/api/auth')
+            const res = await axios.get('http://localhost:5000/api/auth')
             dispatch({
-                type: USER_LOADED, payload:res.data
+                type: USER_LOADED, payload: res.data
             });
         } catch (err) {
             dispatch({
@@ -52,8 +52,8 @@ const AuthState = props => {
             }
         }
         try {
-            const res = await axios.post('http://localhost:5000/api/users',fromData, config);
-           
+            const res = await axios.post('http://localhost:5000/api/users', fromData, config);
+
 
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -92,10 +92,10 @@ const AuthState = props => {
         }
     }
     // Logout
-    const logout = () => console.log('logout');
+    const logout = () => dispatch({ type: LOGOUT });
 
     // Clear Errors
-    const clearErrors = () => dispatch({ type: CLEAR_ERRORS})
+    const clearErrors = () => dispatch({ type: CLEAR_ERRORS })
 
     return (
         <AuthContext.Provider value={{
