@@ -33,24 +33,24 @@ const Login = (props) => {
     e.preventDefault();
     if (email === '' || password === '') {
       setAlert('Please fill in all feilds');
-    }else{
-        login({
-            email,
-            password
-        })
+    } else {
+      login({
+        email,
+        password
+      })
     }
   };
-  if (isAuthenticated) return <Navigate to='/'/>;
-  
+  if (isAuthenticated) return <Navigate to='/' />;
+
   return (
     <div className='form-coniatner'>
       <h1>
         Account <span className='text-primary'>Login</span>
       </h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} autoComplete='off'>
         <div className='form-group'>
           <label htmlFor='email'>Email Address</label>
-          <input type='email' name='email' value={email} onChange={onChange} required/>
+          <input type='email' name='email' value={email} onChange={onChange} required />
         </div>
         <div className='form-group'>
           <label htmlFor='password'>Password</label>

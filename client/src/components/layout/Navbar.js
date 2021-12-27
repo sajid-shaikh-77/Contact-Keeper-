@@ -56,7 +56,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   title: ' Contact Keeper',
-  icon: 'fas fa-id-card-alt'
+  icon: 'fas fa-address-book'
 };
 
 export default Navbar;
