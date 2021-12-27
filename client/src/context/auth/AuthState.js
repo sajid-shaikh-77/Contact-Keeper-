@@ -60,7 +60,7 @@ const AuthState = (props) => {
 
       dispatch({
         type: REGISTER_SUCCESS,
-        payload: res.data
+        payload: res.data.token
       });
 
       loadUser();
