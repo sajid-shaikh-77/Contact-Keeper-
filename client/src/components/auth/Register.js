@@ -49,7 +49,7 @@ const Register = props => {
   };
   if (isAuthenticated) return <Navigate to='/'/>;
   return (
-    <div className='form-coniatner'>
+    <div className='form-container'>
       <h1>
         Account <span className='text-primary'>Register</span>
       </h1>

@@ -32,7 +32,7 @@ const Login = (props) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (email === '' || password === '') {
-      setAlert('Please fill in all feilds');
+      setAlert('Please fill in all fields');
     } else {
       login({
         email,
@@ -43,7 +43,7 @@ const Login = (props) => {
   if (isAuthenticated) return <Navigate to='/' />;
 
   return (
-    <div className='form-coniatner'>
+    <div className='form-container'>
       <h1>
         Account <span className='text-primary'>Login</span>
       </h1>
