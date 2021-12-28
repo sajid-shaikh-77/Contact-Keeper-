@@ -33,7 +33,7 @@ const ContactState = (props) => {
     } catch (err) {
       dispatch({
         type: CONTACT_ERRORS,
-        payload: err.respons.msg
+        payload: err.response.msg
       });
     }
   };
@@ -57,7 +57,7 @@ const ContactState = (props) => {
     } catch (err) {
       dispatch({
         type: CONTACT_ERRORS,
-        payload: err.respons.msg
+        payload: err.response.msg
       });
     }
   };
@@ -96,7 +96,7 @@ const ContactState = (props) => {
     } catch (err) {
       dispatch({
         type: CONTACT_ERRORS,
-        payload: err.respons.msg
+        payload: err.response.msg
       });
     }
   };
@@ -116,12 +116,12 @@ const ContactState = (props) => {
     dispatch({ type: CLEAR_CURRENT });
   };
 
-  // Fliter Contact
+  // Filter Contact
   const filterContact = (text) => {
     dispatch({ type: FILTER_CONTACT, payload: text });
   };
 
-  // clear Fliter
+  // clear Filter
   const clearFilter = () => {
     dispatch({ type: CLEAR_FILTER });
   };
